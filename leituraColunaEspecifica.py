@@ -4,4 +4,5 @@ import pandas as pd
 
 #2
 x = pd.read_excel("pessoas.xlsx", usecols=['Dado1', 'Dado2'])
+#oi = pd.read_excel("oi.xlsx", usecols=[10])
 print(x)
