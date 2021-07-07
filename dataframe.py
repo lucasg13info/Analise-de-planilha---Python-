@@ -59,9 +59,27 @@
 
 import pandas as pd
 from pandas.core.frame import DataFrame
-dados = pd.read_excel("pessoas.xlsx")
 
+dados = pd.read_excel("pessoas.xlsx")
 #DataFrame = pd.DataFrame()
 
 dados_df = pd.DataFrame(dados)
-print(dados_df)
+#print(dados_df.head()) #.head() Lista as primeiras 5 linhas 
+#print(dados_df.shape) #.shape mostra quantas linhas e quantas colunas existem
+#print(dados_df.describe()) #.describle() Mostra um resumo da tabela - dando uma visão geral dos dados
+
+
+#Coluna específica
+# colunaEspecifica = dados_df[['idade', 'altura']]
+# print(colunaEspecifica)
+
+# linhaEspecifica = dados_df.loc[0:0]
+# print(linhaEspecifica)
+
+
+
+nome1 = dados_df.loc[0, 'nome']
+idade1 = (dados_df.loc[0, 'idade']) 
+estado1= (dados_df.loc[0, 'estado']) 
+altura1= (dados_df.loc[0, 'altura']) 
+print(nome1, idade1, estado1, altura1)
